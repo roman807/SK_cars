@@ -42,4 +42,3 @@ class Authentication():
         headers = {'Content-Type': 'application/json',\
                'Authorization': 'Bearer ' + self.id_token}
         return headers
-

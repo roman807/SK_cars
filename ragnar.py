@@ -7,7 +7,6 @@ Created on Thu Nov  1 10:13:58 2018
 """
 import requests
 import json
-#import geojson
 
 url = 'https://spaceknow-imagery.appspot.com'
 
@@ -71,40 +70,4 @@ class GetImagery():
         r_ret_json = r_ret.json()
         self.url = r_ret_json['url']
         self.meta = r_ret_json['meta']
-        return self.url, self.meta
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        return self.url, self.meta    

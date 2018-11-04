@@ -8,9 +8,10 @@ Created on Thu Nov  1 10:31:11 2018
 import requests
 import json
 
+url = 'https://spaceknow-kraken.appspot.com'
+
 class Analyses():
     def __init__(self, headers, sceneId, map_type, extent):
-        self.url = 'https://spaceknow-kraken.appspot.com'
         self.headers = headers
         self.sceneId = sceneId
         self.map_type = map_type
@@ -22,7 +23,7 @@ class Analyses():
     def init_image(self):
         initiate = '/kraken/release/' + self.map_type + '/geojson/initiate'
         payload = {'sceneId': self.sceneId, 'extent': self.extent}
-        r_kraken = requests.post(self.url + initiate, data=json.dumps(payload), 
+        r_kraken = requests.post(url + initiate, data=json.dumps(payload), 
                                  headers=self.headers)
         r_kraken_json = r_kraken.json()
         self.pipelineId = r_kraken_json['pipelineId']
@@ -30,7 +31,7 @@ class Analyses():
     def ret_image(self):
         retrieve = '/kraken/release/' + self.map_type + '/geojson/retrieve'
         payload_ret = {'pipelineId': self.pipelineId}
-        r_kraken_ret = requests.post(self.url + retrieve, 
+        r_kraken_ret = requests.post(url + retrieve, 
                         data=json.dumps(payload_ret), headers=self.headers)
         r_kraken_ret_json = r_kraken_ret.json()
         self.mapId = r_kraken_ret_json['mapId']
