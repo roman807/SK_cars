@@ -12,7 +12,7 @@ from PIL import Image
 from auth import Authentication
 from ragnar import SearchImagery, GetImagery
 from kraken import Analyses
-from wait_until_processed import Wait
+from wait import Wait
 from grid_files import Cars, TrueImage, combine_pictures
 
 def main():
