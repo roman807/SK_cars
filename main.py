@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Nov  1 09:44:37 2018
-
 @author: roman
 """
 import matplotlib.pyplot as plt

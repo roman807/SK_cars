@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Nov  2 18:20:45 2018
-
 @author: roman
 """
 import time

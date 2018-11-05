@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Nov  1 10:00:12 2018
-
 @author: roman
 """
 import requests
@@ -19,7 +18,7 @@ class Authentication():
         if path.isfile('jwt_token.json'):
             with open('jwt_token.json') as f:
                 jwt_token_old = json.load(f)
-            if jwt_token_old['time'] + 3600 * 10 > time.time() :
+            if jwt_token_old['time'] + 3600 * 10 > time.time():
                 self.id_token = jwt_token_old['id_token']
         else:
             self.get_jwt()

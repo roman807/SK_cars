@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Nov  1 09:49:44 2018
-
 @author: roman
 """
 import geojson

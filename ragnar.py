@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Nov  1 10:13:58 2018
-
 @author: roman
 """
 import requests
