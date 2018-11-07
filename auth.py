@@ -20,9 +20,11 @@ class Authentication():
                 jwt_token_old = json.load(f)
             if jwt_token_old['time'] + 3600 * 10 > time.time():
                 self.id_token = jwt_token_old['id_token']
+            else:
+                self.get_jwt()
         else:
             self.get_jwt()
-
+            
     def get_jwt(self):
         data = {"client_id": "hmWJcfhRouDOaJK2L8asREMlMrv3jFE1",
                 "username": self.username,
